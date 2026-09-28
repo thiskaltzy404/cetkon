@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NecDown</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#02030a;
+overflow-x:hidden;
+color:white;
+}
+
+.hero{
+height:100vh;
+width:100%;
+position:relative;
+background:
+linear-gradient(to bottom,
+rgba(0,0,0,.2),
+rgba(0,0,0,.4),
+rgba(0,0,0,.8)),
+url('background.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at center,
+rgba(125,70,255,.25),
+transparent 60%);
+}
+
+.navbar{
+position:absolute;
+top:20px;
+left:0;
+width:100%;
+padding:0 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+width:42px;
+filter:
+drop-shadow(0 0 10px #00d4ff)
+drop-shadow(0 0 20px #8a2eff);
+}
+
+.brand h2{
+font-size:28px;
+font-weight:700;
+}
+
+.menu{
+font-size:34px;
+cursor:pointer;
+}
+
+.content{
+position:relative;
+z-index:5;
+max-width:700px;
+padding:20px;
+}
+
+.logo-big{
+width:260px;
+animation:float 4s ease-in-out infinite;
+filter:
+drop-shadow(0 0 15px #00d4ff)
+drop-shadow(0 0 40px #9d4dff);
+}
+
+.title{
+font-size:72px;
+font-weight:800;
+margin-top:20px;
+line-height:1;
+}
+
+.gradient{
+background:linear-gradient(90deg,#ffffff,#b76cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+margin-top:16px;
+font-size:22px;
+font-weight:500;
+}
+
+.desc{
+margin-top:12px;
+font-size:18px;
+opacity:.9;
+}
+
+.cta{
+margin-top:40px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:20px 70px;
+border-radius:100px;
+text-decoration:none;
+font-size:24px;
+font-weight:700;
+color:white;
+background:
+linear-gradient(
+90deg,
+#8b4dff,
+#2ec8ff
+);
+
+box-shadow:
+0 0 20px rgba(118,86,255,.8),
+0 0 60px rgba(46,200,255,.4);
+
+transition:.3s;
+}
+
+.cta:hover{
+transform:translateY(-5px) scale(1.03);
+}
+
+.scroll{
+position:absolute;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.indicator{
+display:flex;
+gap:10px;
+justify-content:center;
+}
+
+.indicator span{
+width:70px;
+height:6px;
+border-radius:30px;
+background:#4d5cff;
+}
+
+.indicator span:first-child{
+background:#ff79ff;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+.particles{
+position:absolute;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+}
+
+.particles span{
+position:absolute;
+width:4px;
+height:4px;
+background:#4ccfff;
+border-radius:50%;
+animation:move 12s linear infinite;
+opacity:.7;
+}
+
+@keyframes move{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+@media(max-width:768px){
+
+.logo-big{
+width:180px;
+}
+
+.title{
+font-size:58px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.desc{
+font-size:15px;
+}
+
+.cta{
+padding:18px 50px;
+font-size:20px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="particles">
+<span style="left:10%;animation-delay:0s"></span>
+<span style="left:20%;animation-delay:2s"></span>
+<span style="left:30%;animation-delay:4s"></span>
+<span style="left:40%;animation-delay:1s"></span>
+<span style="left:50%;animation-delay:5s"></span>
+<span style="left:60%;animation-delay:3s"></span>
+<span style="left:70%;animation-delay:6s"></span>
+<span style="left:80%;animation-delay:2s"></span>
+<span style="left:90%;animation-delay:4s"></span>
+</div>
+
+<header class="navbar">
+
+<div class="brand">
+<img src="logo.png">
+<h2>NecDown</h2>
+</div>
+
+<div class="menu">
+☰
+</div>
+
+</header>
+
+<div class="content">
+
+<img src="logo.png" class="logo-big">
+
+<h1 class="title">
+Nec<span class="gradient">Down</span>
+</h1>
+
+<p class="subtitle">
+Download Apa Saja, Kapan Saja, Di Mana Saja!
+</p>
+
+<p class="desc">
+Cepat • Aman • Gratis • Tanpa Batas
+</p>
+
+<a href="#" class="cta">
+Mulai Sekarang →
+</a>
+
+</div>
+
+<div class="scroll">
+<div class="indicator">
+<span></span>
+<span></span>
+</div>
+</div>
+
+</section>
+
+</body>
+</html>
